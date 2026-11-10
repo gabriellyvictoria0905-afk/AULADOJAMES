@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aula 12 - formulario</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        .most{
+            position: fixed;
+            top: 25%;
+            left: 50%;
+        }    </style>
+</head>
+<body>
+    <header><h1>Aula 12 - formulario</h1></header>
+    <nav></nav>
+    <main>
+        <form action="">
+            <table>
+                 <TR>
+                <TD colspan="2"> <b>dados pessoais</b></td>
+                </TR>
+            <TR>
+            <TD> NOME:</TD>
+            <TD><input type="text" name="Nome" id="nome"></Td>
+            </TR>
+
+            <TR>
+                <TD>DATA DE NACIMENTO:</TD>
+                    <TD><input type="date" name="dn" id="dn"></TD>
+                </TR>
+
+            <TR>
+                <TD> E-mail:</TD>
+                <TD><input type="email" name="email" id="email"></TD>
+            </TR>
+
+            <TR>
+                <TD>DUCUMENTO:</TD>
+                <TD><input type="text" name="cpf" id="cpf"></TD>
+            </TR>
+
+            <TR>
+                <TD colspan="2"> <b> ENDEREÇO</b></td>
+                </TR>
+            <TR>
+                <TD> RUA:</TD>
+                <TD><input type="text" name="Rua" id="rua"></td>
+                </TR>
+
+            <TR>
+                <TD>NUMERO:</TD>
+                <td><input type="number" name="NUMERO" id="num"></td>
+            </TR>
+
+            <TR>
+                <TD>BAIRRO:</TD>
+                <td><input type="text" name="BAIRRO" id="ba"></td> 
+            </TR>
+
+            <TR>
+                <TD>CIDADE:</TD>
+                <td><input type="text" name="CIDADE" id="cid"></TD>
+                </TR>
+
+            <TR>
+                <TD>CEP:</TD>
+                <td><input type="text" name="CEP1" id="cep1" size="9">-
+                    <input type="text" name="CEP2" id="cep2" size="4"></TD>
+                </TR>
+ <TR>
+                <TD colspan="2"> <b> cursos:</b></td>
+                </TR>
+            <TR>
+                <TD colspan="2">QUAL CURSO DE TI VOCÊ ESTÁ FAZENDO?</TD></tr>
+             <tr>   
+           <td><input type="radio" name="cur" id="cl" value="curso livre">cusos livre </td>
+               </tr>
+                <td><input type="radio" name="cur" id="ct" value="curso tecnico">cusos tecnico </td>
+               </tr>
+
+               <tr>
+                <td><input type="radio" name="cur" id="gr" value="graduação">graduação </td>
+               </tr>
+
+                <TR>
+                <TD colspan="2">QUAIS LIGUAGENS de Programação você gosta?</TD>
+                <td></TD></TR>
+
+             <tr>
+                <td><input type="checkbox" name="html" id="html" value="html"> html </td>
+               </tr>
+              
+             <tr>
+                <td><input type="checkbox" name="js" id="js" value="js"> js </td>
+               </tr>
+
+               <tr>
+                <td><input type="checkbox" name="python" id="python" value="python">python </td>
+               </tr>
+               <tr>
+                <td><input type="checkbox" name="php" id="php" value="php">php </td>
+               </tr>
+               <tr>
+                <td><input type="checkbox" name="java" id="java" value="java">java</td>
+               </tr>
+
+               <tr>
+                <TD colspan="2">QUAl CARREIRA QUER SEGIR EM TI?</TD>
+                <td></TD></TR>
+               
+                    <TR>
+                        <TD>
+                            <SELEct name="CARREIRA" id="CARREIRA">
+                                <OPTIon value="">ESCOLHA SUA CARREIRA</OPTIon>
+                                <OPTIon value="Programação">Programação</OPTIon>
+                                <OPTIon value="ANALISTA">ANALISTA DE SISTEMAS</OPTIon>
+                                <OPTIon value="DESIGN">DESIGNER</OPTIon>
+                                <OPTIon value="AD">ANALISTA DE DADOS</OPTIon>
+                            </SELEct>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD><INput type="reset" value="APAGAR"></TD>
+                            <TD><button type="button" onclick="ler()" >ENVIAR</button></TD>
+                    </TR>
+
+
+
+           </table>
+          
+        </form>
+        <div class="most" id='mostra'></div>
+    </main>
+    <footer><h1>Programação WEB - Gabrielly</h1></footer>
+    <script>
+        function ler(){
+          let nome = document.getElementById("nome").value;
+          let dn = document.getElementById("dn").value;   
+          let login = document.getElementById("email").value;
+          let cpf = document.getElementById("cpf").value;
+          let rua = document.getElementById("rua").value;
+          let num = document.getElementById("num").value;
+          let ba = document.getElementById("ba").value;
+          let cid = document.getElementById("cid").value;
+          let cep1 = document.getElementById("cep1").value;
+          let cep2 = document.getElementById("cep2").value;
+
+
+
+
+          let curso = "";
+          if(document.getElementById("cl").checked){
+            curso = document.getElementById("cl").value;
+          }
+          else if(document.getElementById("ct").checked){
+            curso = document.getElementById("ct").value;
+          }
+          else if(document.getElementById("gr").checked){
+            curso = document.getElementById("gr").value;
+          }
+
+          let  html = "";
+           if(document.getElementById("html").checked){
+            html = document.getElementById("html").value;
+           }
+
+           let  php = "";
+           if(document.getElementById("php").checked){
+            php = document.getElementById("php").value;
+           }
+           let  js = "";
+           if(document.getElementById("js").checked){
+            js = document.getElementById("js").value;
+           }
+           let  java = "";
+           if(document.getElementById("java").checked){
+            java = document.getElementById("java").value;
+           }
+           let  python = "";
+           if(document.getElementById("python").checked){
+            python = document.getElementById("python").value;
+           }
+           
+            let car = document.getElementById("CARREIRA").value;
+
+            document.getElementById('mostra').innerHTML =`
+            <h2>Dados pessoais:</h2>
+            <p>nome:${nome}</p>
+            <p>Nascimento:${dn}</p>
+            <p>Email: ${login}</p>
+            <p>Documento: ${cpf}</p>
+            <h2>Endereço:</h2>
+            <p>rua: ${rua}</p>
+            <p>num: ${num}</p>
+            <p>bar: ${ba}</p>
+            <p>cid: ${cid}</p>
+            <p>cep: ${cep1} -${cep2}</p>
+            <h2>fermação e carreira:</h2>
+            <p>curso: ${curso}</p>
+            <p>linguagens: ${html} ${php} ${js} ${python} ${java}</p>
+            <p>CARREIRA: ${car}</p> `;
+
+        }
+    </script>
+</body>
+</html>
