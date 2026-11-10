@@ -1,0 +1,58 @@
+body{ 
+    background-color:rgb(175, 191, 240);
+}
+header{
+    position: fixed;
+    height: 10%;
+    top: 0%;
+    width: 100%;
+    left: 0%;
+    text-align: center;}
+
+
+nav{
+    background-color: rgb(175, 191, 240);
+    position: fixed;
+    height: 10%;
+    top: 10%;
+    width: 100%;
+    left: 0%;
+    text-align: center;}
+
+main{
+    position: fixed;
+    height: 70%;
+    top: 20%;
+    width: 100%;
+    left: 0%;
+    text-align: justify;
+    padding-left: 5%;
+    overflow: auto;}
+
+footer{
+    background-color: rgb(85, 230, 198);
+    position: fixed;
+    height: 10%;
+    top: 90%;
+    width: 100%;
+    left: 0%;
+    text-align: center;
+} 
+.verd{
+    color: green;
+    font-size: 150%;
+}
+.VERM{
+    color: red;
+    font-size: 150%;
+}
+.LARA{
+    color: orange;
+    font-size: 150%;
+}
+
+.azul{
+    color: rgb(51, 10, 236);
+    font-size: 150%;
+}
+
